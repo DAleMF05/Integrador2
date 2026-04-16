@@ -1,0 +1,33 @@
+package modelo;
+
+import jakarta.persistence.*;
+import lombok.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Entity
+@Table(name = "estudiante")
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+public class Estudiante {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int idEstudiante;
+    private String nombre;
+    private String apellido;
+    private int edad;
+    private char genero;
+    private String dni;
+    private String ciudad;
+    private String numLibretaUni;
+    private List<Carrera> carreras;
+
+    @OneToMany(mappedBy = "estudiante")
+    private List<Inscripcion> inscripciones = new ArrayList<>();
+
+    // getters y setters
+}

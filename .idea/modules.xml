@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Integrador2.iml" filepath="$PROJECT_DIR$/.idea/Integrador2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/otro_ejemplo_jpa.iml" filepath="$PROJECT_DIR$/otro_ejemplo_jpa.iml" />
     </modules>
   </component>
 </project>

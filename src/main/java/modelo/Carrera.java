@@ -15,9 +15,9 @@ import java.util.List;
 public class Carrera {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idCarrera;
+    private int idCarrera;
     private String nombre;
+    private int duracion;
 
     @OneToMany(mappedBy = "carrera")
     private List<Inscripcion> inscripciones = new ArrayList<>();

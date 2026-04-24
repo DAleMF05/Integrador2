@@ -11,8 +11,12 @@ import java.time.LocalDate;
 @ToString
 public class InscripcionDTO {
 
-    private int idEstudiante; //poner nombre!
+    private int idInscripcion;
+    private String idEstudiante; //poner nombre!
     private int idCarrera;
-    private LocalDate fechaInsc;
-    private LocalDate fechaGrad;
+    private int fechaInsc;
+    private int fechaGrad;
+    private int antiguedad;
+
+
 }

@@ -22,11 +22,11 @@ public class EstudianteRepository {
 
             while ((linea = reader.readNext()) != null) {
                 Estudiante estudiante = new Estudiante();
-                estudiante.setNombre(linea[0]);
-                estudiante.setApellido(linea[1]);
-                estudiante.setEdad(Integer.parseInt(linea[2]));
-                estudiante.setGenero(linea[3].charAt(0));
-                estudiante.setDni(linea[4]);
+                estudiante.setDni(linea[0]);
+                estudiante.setNombre(linea[1]);
+                estudiante.setApellido(linea[2]);
+                estudiante.setEdad(Integer.parseInt(linea[3]));
+                estudiante.setGenero(linea[4].charAt(0));
                 estudiante.setCiudad(linea[5]);
                 estudiante.setNumLibretaUni(linea[6]);
 //                estudiante.setInscripciones();
@@ -47,7 +47,7 @@ public class EstudianteRepository {
 
         em.getTransaction().begin();
 
-        Estudiante existente = em.find(Estudiante.class, estudiante.getIdEstudiante());
+        Estudiante existente = em.find(Estudiante.class, estudiante.getDni());
 
         if (existente == null) {
             em.persist(estudiante);
@@ -63,8 +63,8 @@ public class EstudianteRepository {
     //DTO
     public List<EstudianteDTO> buscarTodos() {
         EntityManager em = JPAUtil.getEntityManager();
-        List<EstudianteDTO> estudiantes = em.createQuery("SELECT new dto.EstudianteDTO(e.idEstudiante, e.nombre, e.apellido, " +
-                        "e.edad, e.genero, e.dni, e.ciudad, e.numLibretaUni) FROM Estudiante e",
+        List<EstudianteDTO> estudiantes = em.createQuery("SELECT new dto.EstudianteDTO(e.dni, e.nombre, e.apellido, " +
+                        "e.edad, e.genero, e.ciudad, e.numLibretaUni) FROM Estudiante e",
                             EstudianteDTO.class).getResultList();
         em.close();
         return estudiantes;

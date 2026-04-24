@@ -10,5 +10,7 @@ import lombok.*;
 
 public class CarreraDTO {
 
+    private int idCarrera;
     private String nombre;
+    private int duracion;
 }

@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
-import java.util.List;
 
 @Entity
 @Table(name = "inscripcion")
@@ -15,10 +14,10 @@ import java.util.List;
 public class Inscripcion {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idInscripcion;
-    private LocalDate fechaInsc;
-    private LocalDate fechaGrad;
+    private int idInscripcion;
+    private int fechaInsc;
+    private int fechaGrad;
+    private int antiguedad;
 
     @ManyToOne
     @JoinColumn(name = "idEstudiante")

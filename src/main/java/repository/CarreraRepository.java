@@ -25,7 +25,9 @@ public class CarreraRepository {
 
             while ((linea = reader.readNext()) != null) {
                 Carrera carrera = new Carrera();
-                carrera.setNombre(linea[0]);
+                carrera.setIdCarrera(Integer.parseInt(linea[0]));
+                carrera.setNombre(linea[1]);
+                carrera.setDuracion(Integer.parseInt(linea[2]));
 
                 em.persist(carrera);
             }
@@ -42,7 +44,7 @@ public class CarreraRepository {
     //dto
     public List<CarreraDTO> buscarTodos() {
         EntityManager em = JPAUtil.getEntityManager();
-        List<CarreraDTO> carreras = em.createQuery("SELECT new dto.CarreraDTO(c.nombre) FROM Carrera c", CarreraDTO.class).getResultList();
+        List<CarreraDTO> carreras = em.createQuery("SELECT new dto.CarreraDTO(c.idCarrera, c.nombre, c.duracion) FROM Carrera c", CarreraDTO.class).getResultList();
         em.close();
         return carreras;
     }

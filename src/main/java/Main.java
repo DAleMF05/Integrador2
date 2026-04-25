@@ -73,6 +73,10 @@ public class Main {
             System.out.println(est);
         }
 
+        System.out.println("estudiante por libreta universitaria: ");
+        System.out.println(estudiante.buscarEstudiantePorLU("51244"));
+
+
 
 
 

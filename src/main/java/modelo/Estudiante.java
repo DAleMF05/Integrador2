@@ -24,6 +24,7 @@ public class Estudiante {
     private int edad;
     private char genero;
     private String ciudad;
+    @Column(unique = true, nullable = false)
     private String numLibretaUni;
 
     @OneToMany(mappedBy = "estudiante")

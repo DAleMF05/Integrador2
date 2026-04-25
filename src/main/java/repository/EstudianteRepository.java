@@ -81,30 +81,19 @@ public class EstudianteRepository {
         return estudiantesPorDNI;
     }
 
-//    public List<DireccionDTO> direccion_de_persona(String nombre) {
-//        EntityManager em = JPAUtil.getEntityManager();
-//        List<DireccionDTO> direcciones = new ArrayList<>();
-//
-//        try {
-//            direcciones = em.createQuery(
-//                            "SELECT new micro.example.dto.DireccionDTO(d.ciudad, d.calle, d.numero, d.codigoPostal) " +
-//                                    "FROM Direccion d JOIN d.personas p " +
-//                                    "WHERE p.nombre = :nombre",
-//                            DireccionDTO.class
-//                    )
-//                    .setParameter("nombre", nombre)
-//                    .getResultList();
-//
-//            if (direcciones.isEmpty()) {
-//                System.out.println("No existe persona con ese nombre");
-//            }
-//
-//        } catch (Exception e) {
-//            System.out.println("Error al ejecutar la consulta: " + e.getMessage());
-//        } finally {
-//            em.close();
-//        }
-//
-//        return direcciones;
-//    }
+    public EstudianteDTO buscarEstudiantePorLU(String lu) {
+
+        EntityManager em = JPAUtil.getEntityManager();
+        EstudianteDTO estudiantePorLU = em.createQuery(
+                "SELECT new dto.EstudianteDTO(e.dni, e.nombre, e.apellido, " +
+                        "e.edad, e.genero, e.ciudad, e.numLibretaUni) " +
+                        "FROM Estudiante e " +
+                        "WHERE e.numLibretaUni = :lu",
+                EstudianteDTO.class)
+                .setParameter("lu", lu)
+                .getSingleResult();
+        em.close();
+        return estudiantePorLU;
+
+    }
 }

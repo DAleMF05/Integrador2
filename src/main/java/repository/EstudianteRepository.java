@@ -69,6 +69,18 @@ public class EstudianteRepository {
         return estudiantes;
     }
 
+    public List<EstudianteDTO> buscarTodosPorDNI() {
+        EntityManager em = JPAUtil.getEntityManager();
+        List<EstudianteDTO> estudiantesPorDNI = em.createQuery(
+                "SELECT new dto.EstudianteDTO(e.dni, e.nombre, e.apellido, " +
+                        "e.edad, e.genero, e.ciudad, e.numLibretaUni) " +
+                        "FROM Estudiante e " +
+                        "ORDER BY e.dni" ,
+                EstudianteDTO.class).getResultList();
+        em.close();
+        return estudiantesPorDNI;
+    }
+
 //    public List<DireccionDTO> direccion_de_persona(String nombre) {
 //        EntityManager em = JPAUtil.getEntityManager();
 //        List<DireccionDTO> direcciones = new ArrayList<>();

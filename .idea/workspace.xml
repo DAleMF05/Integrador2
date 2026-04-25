@@ -6,17 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a256ecb8-2f4c-4d99-b1c4-2209ebaa388e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modelo/Carrera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelo/Carrera.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modelo/Estudiante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelo/Estudiante.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modelo/Inscripcion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelo/Inscripcion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/CarreraRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/CarreraRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/repository/EstudianteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/EstudianteRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/repository/InscripcionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/InscripcionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/estudianteCarrera.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/estudianteCarrera.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/carrera.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/estudiante.csv" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +123,7 @@
       <workItem from="1776979209562" duration="9193000" />
       <workItem from="1777055869576" duration="12930000" />
       <workItem from="1777072188508" duration="2504000" />
-      <workItem from="1777118608183" duration="7791000" />
+      <workItem from="1777118608183" duration="9134000" />
     </task>
     <servers />
   </component>

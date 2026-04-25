@@ -67,8 +67,13 @@ public class Main {
         System.out.println(nuevaInsc.getEstudiante());
         System.out.println(segundaInsc.toString());
 
-        System.out.println();
-//        Inscripcion nueva = new Inscripcion()
+        System.out.println("Lista de estudiantes por DNI: ");
+        List<EstudianteDTO> estudianteDTOS= estudiante.buscarTodosPorDNI();
+        for (EstudianteDTO est : estudianteDTOS){
+            System.out.println(est);
+        }
+
+
 
 
     }

@@ -58,11 +58,6 @@ public class InscripcionRepository {
         return inscripcionDTOS;
     }
 
-//    public void matricularEstudiante(Estudiante estudiante, Carrera carrera) {
-//        EntityManager em = JPAUtil.getEntityManager();
-//        Inscripcion nuevaInsc = new Inscripcion(estudiante.getDni(), carrera.getIdCarrera());
-//    }
-
     public void matricularEstudiante(Inscripcion nueva) {
         EntityManager em = JPAUtil.getEntityManager();
 
@@ -86,4 +81,5 @@ public class InscripcionRepository {
         em.getTransaction().commit();
         em.close();
     }
+
 }
